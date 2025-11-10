@@ -86,7 +86,8 @@ All operations and statuses are displayed in real time on the **Serial Monitor**
 
 ## 👨‍💻 **Developer Info**
 
-**👑 Created by:** *Benyas Wondwosen*
-**🏢 Company:** Nafiyas Solution
-**📘 Project:** Door Security System (Benu Edition)
-**💡 Focus:** Smart Home & Embedded Innovation
+👑 Created by:** *Benyas Wondwosen*
+🏢 Company:** Nafiyas Solution
+📘 Project:** Door Security System (Benu Edition)
+💡 Focus:** Smart Home & Embedded Innovation
+---
