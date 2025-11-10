@@ -1,70 +1,92 @@
-🔐 Door Security System with SIM800 and Ultrasonic Sensor
 
-This project is a smart door security system that detects motion near a door using an ultrasonic sensor and automatically makes a phone call alert using the SIM800 GSM module.
-It’s designed to help protect your home by notifying you instantly when someone approaches the door.
+---
 
-🧠 Features
+# 🔐 **Door Security System – Benu Edition**
 
-📡 Ultrasonic distance detection (measures object distance in cm)
+> 🏠 A smart door protection system that detects movement near your door and automatically calls your phone using the **SIM800 GSM module**.
+> Stay safe, stay connected — powered by **Nafiyas Solution** ⚙️
 
-📞 Automatic phone call alert when someone is detected near the door
+---
 
-✅ Real-time status monitoring via Serial Monitor
+## 🌟 **Overview**
 
-⚙️ Auto-reset system when the area becomes clear
+This project is built to **detect intruders** approaching your door using an **ultrasonic sensor (HC-SR04)**.
+When someone comes too close, the system **instantly makes a phone call** to alert you.
+All operations and statuses are displayed in real time on the **Serial Monitor**.
 
-💬 Friendly and informative Serial Monitor messages
+---
 
-🧰 Components Required
-Component	Quantity	Description
-Arduino Nano / Uno	1	Main controller board
-SIM800 GSM Module	1	To make phone calls
-Ultrasonic Sensor (HC-SR04)	1	For distance measurement
-Jumper Wires	Several	For connections
-Power Supply	1	5V regulated power
-🔌 Pin Connections
-Component	Pin	Arduino Pin
-Ultrasonic Sensor	Trig	D6
-Ultrasonic Sensor	Echo	D7
-SIM800 Module	TX	D10
-SIM800 Module	RX	D9
-Power (VCC/GND)	—	5V / GND
-🧾 Code Explanation
+## ⚡ **Features**
 
-Distance Measurement
-The HC-SR04 sensor sends a pulse to measure the distance between the door and any approaching object.
+✅ Real-time door monitoring
+✅ Automatic intruder call alert (via SIM800)
+✅ Friendly Serial Monitor messages
+✅ Auto-reset when area becomes clear
+✅ Works with Arduino Nano or Uno
 
-Intruder Detection
-If the measured distance is below 20 cm (configurable), the system assumes an intruder is present.
+---
 
-Automatic Call
-The SIM800 module calls the owner’s phone number (+2519523,,,,,) to alert them.
+## 🧩 **Components Required**
 
-Reset Condition
-When no object is detected (distance > 20 cm), the system resets and waits for the next event.
+| 🔧 Component                | 🔢 Quantity | 📝 Description          |
+| --------------------------- | ----------- | ----------------------- |
+| Arduino Nano / Uno          | 1           | Main control board      |
+| SIM800 GSM Module           | 1           | For making phone calls  |
+| Ultrasonic Sensor (HC-SR04) | 1           | Detects object distance |
+| Jumper Wires                | Several     | For connections         |
+| Power Supply                | 1           | 5V regulated source     |
 
-📟 Serial Monitor Output Example
+---
+
+## 🔌 **Circuit Connections**
+
+| Component       | Pin       | Arduino Pin |
+| --------------- | --------- | ----------- |
+| HC-SR04 Trigger | Trig      | D6          |
+| HC-SR04 Echo    | Echo      | D7          |
+| SIM800 TX       | TX        | D10         |
+| SIM800 RX       | RX        | D9          |
+| Power           | VCC / GND | 5V / GND    |
+---
+
+## 🧠 **How It Works**
+
+1. The ultrasonic sensor measures distance in front of the door.
+2. If an object comes closer than **20 cm**, the system assumes someone is there.
+3. The **SIM800 module** makes a call to the saved phone number.
+4. When the object moves away, the system resets and continues monitoring.
+
+---
+
+## 📟 **Serial Monitor Output Example**
+
+```
 🔐 Door Security System Initialized
 📡 Ultrasonic sensor and SIM800 module are active
 ------------------------------------------------
-🚪 Door Distance(safty): 35 cm(Benu)
+🚪 Door Distance(safty): 34 cm(Benu)
 🚪 Door Distance(safty): 15 cm(Benu)
 ⚠️  Intruder detected near the door! Placing security call...
 📞 Calling owner... Please wait.
 📴 Call ended. Resuming monitoring mode...
 ✅ Door area is secure. System is on standby.
+```
 
-🧩 Customization
+---
 
-Change callThreshold to adjust the detection range (default: 20 cm).
+## 🧰 **Customization**
 
-Replace the phone number inside makeCall("+251952306750") with your own.
+🛠️ You can easily modify:
 
-Add SMS alert functionality if you want both call and text notifications.
+* **Detection range:** change the value of `callThreshold`
+* **Phone number:** replace `+251952306750` with your own number
+* **Delay times:** customize call duration or sensor delay
 
-👨‍💻 Developed By
+---
 
-Benyas Wondwosen
-Smart Systems & Embedded Projects Developer
-Project Name: Door Security System (Benu Edition)
-Powered by Nafiyas Solution
+## 👨‍💻 **Developer Info**
+
+**👑 Created by:** *Benyas Wondwosen*
+**🏢 Company:** Nafiyas Solution
+**📘 Project:** Door Security System (Benu Edition)
+**💡 Focus:** Smart Home & Embedded Innovation
