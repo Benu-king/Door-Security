@@ -79,7 +79,7 @@ All operations and statuses are displayed in real time on the **Serial Monitor**
 🛠️ You can easily modify:
 
 * **Detection range:** change the value of `callThreshold`
-* **Phone number:** replace `+251952306750` with your own number
+* **Phone number:** replace `+251952.....` with your own number
 * **Delay times:** customize call duration or sensor delay
 
 ---
